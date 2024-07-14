@@ -39,6 +39,7 @@ class HelloViewController: UIViewController {
         
         toDoList.register(UITableViewCell.self, forCellReuseIdentifier: "ReusableCell")
         populatePosts()
+        addLongPressGesture()
         
     }
 }
@@ -114,7 +115,6 @@ extension HelloViewController: UITableViewDataSource{
                 } else if let posts = posts {
                     print("Fetched \(posts.count) posts for user")
                     for post in posts {
-                        print(post.body)
                         self.toDoList.reloadData()
                     }
                 }
@@ -134,10 +134,12 @@ extension HelloViewController: UITableViewDataSource{
                 var posts: [Post] = []
                 for document in querySnapshot!.documents {
                     let data = document.data()
+                    let key = document.documentID
                     let content = data["post"] as? String ?? "No Content"
+                    let date = data["date"] as? Double ?? 0.00
+                    let post = Post(key: key, body:content, date: date)
                     
-                    
-                    let post = Post(body:content)
+                    print(post.key)
                     posts.append(post)
                     self.toDo.append(post)
                 }
@@ -147,19 +149,21 @@ extension HelloViewController: UITableViewDataSource{
     }
     
     
-    
 }
 
 extension HelloViewController {
     func postButtonClicked(){
         
         if let text = addItemText.text{
-            let post = Post(body: text)
-            toDo.append(post)
+            let date = Date().timeIntervalSince1970
+
+            let post = Post(key: "", body: text, date: date)
+            toDo.insert(post, at: 0)
             toDoList.reloadData()
-            
+            print("new post")
+            print(post.date)
             let postRef = db.collection("users").document(currentUser!.uid).collection("posts").document()
-            postRef.setData(["post":text, "date":Date().timeIntervalSince1970]){ error in
+            postRef.setData(["post":text, "date":date]){ error in
                 if let error = error {
                     print("Error adding post: \(error)")
                 } else {
@@ -171,3 +175,54 @@ extension HelloViewController {
     }
 }
 
+extension HelloViewController{
+    func addLongPressGesture(){
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        toDoList.addGestureRecognizer(longPressGesture)
+    }
+}
+
+extension HelloViewController {
+    @objc func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            let touchPoint = gestureRecognizer.location(in: self.toDoList)
+            if let indexPath = toDoList.indexPathForRow(at: touchPoint) {
+                presentDeleteActionSheet(forRowAt: indexPath)
+            }
+        }
+    }
+
+    func presentDeleteActionSheet(forRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to delete this item?", preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.deleteItem(at: indexPath)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+
+extension HelloViewController {
+    func deleteItem(at indexPath: IndexPath) {
+        let postToDelete = toDo[indexPath.row]
+
+        print(postToDelete.body)
+        print(postToDelete.body)
+        
+        let postRef = db.collection("users").document(currentUser!.uid).collection("posts").document(postToDelete.key!)
+        
+        postRef.delete { error in
+            if let error = error {
+                print("Error deleting post: \(error)")
+            } else {
+                print("Post successfully deleted")
+            }
+        }
+        
+        toDo.remove(at: indexPath.row)
+        toDoList.deleteRows(at: [indexPath], with: .automatic)
+    }
+}

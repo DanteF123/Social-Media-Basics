@@ -9,5 +9,13 @@ import Foundation
 
 struct Post{
     let body : String
+    let date : Date
+    var key : String?
+    
+    init(key:String?, body: String, date: Double) {
+        self.body = body
+        self.date = Date(timeIntervalSince1970: date)
+        self.key = key
+    }
     
 }
