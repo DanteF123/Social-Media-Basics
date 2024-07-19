@@ -237,14 +237,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-iU-M82">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84t-nT-fk3" userLabel="Search Button">
+                                <rect key="frame" x="317" y="50" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass.circle" catalog="system"/>
                                 <connections>
-                                    <outlet property="delegate" destination="jiW-yU-y1X" id="CGZ-Vm-O2A"/>
+                                    <segue destination="JbC-QH-Qph" kind="show" id="hUd-WY-MRn"/>
                                 </connections>
-                            </searchBar>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9I2-JM-LDs"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
@@ -260,12 +261,48 @@
             </objects>
             <point key="canvasLocation" x="2209.9236641221373" y="-217.60563380281693"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="LZg-RY-8ax">
+            <objects>
+                <viewController id="JbC-QH-Qph" customClass="SearchViewController" customModule="Social_Media_Basics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqd-PT-Jyo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-dc-ngc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JbC-QH-Qph" id="eYg-0V-Z3u"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-HA-h9l">
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cMP-eR-OEk"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="byt-M2-6Oj"/>
+                    <connections>
+                        <outlet property="searchBar" destination="QMT-dc-ngc" id="btH-Gk-cdd"/>
+                        <outlet property="searchResults" destination="KTO-HA-h9l" id="hAB-p3-JnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q3P-FL-tqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3125.9541984732823" y="-218.3098591549296"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Egs-KO-HUh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IMG_3113" width="2316" height="3088"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

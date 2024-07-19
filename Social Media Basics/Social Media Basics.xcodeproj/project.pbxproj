@@ -24,6 +24,7 @@
 		7B6E04DD2C279D4900097A39 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E04DC2C279D4900097A39 /* HelloViewController.swift */; };
 		7B6E04DF2C2B767C00097A39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E04DE2C2B767C00097A39 /* User.swift */; };
 		7B6E05672C37831A00097A39 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E05662C37831A00097A39 /* Post.swift */; };
+		7B6E05752C4724E800097A39 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E05742C4724E800097A39 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7B6E04DC2C279D4900097A39 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		7B6E04DE2C2B767C00097A39 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B6E05662C37831A00097A39 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7B6E05742C4724E800097A39 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				7B54368F2C23AC490092407F /* RegisterViewController.swift */,
 				7B5436522C223CFE0092407F /* HomeViewController.swift */,
 				7B6E04DC2C279D4900097A39 /* HelloViewController.swift */,
+				7B6E05742C4724E800097A39 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			files = (
 				7B5436532C223CFE0092407F /* HomeViewController.swift in Sources */,
 				7B6E04DD2C279D4900097A39 /* HelloViewController.swift in Sources */,
+				7B6E05752C4724E800097A39 /* SearchViewController.swift in Sources */,
 				7B6E04DF2C2B767C00097A39 /* User.swift in Sources */,
 				7B54364F2C223CFE0092407F /* AppDelegate.swift in Sources */,
 				7B5436512C223CFE0092407F /* SceneDelegate.swift in Sources */,
