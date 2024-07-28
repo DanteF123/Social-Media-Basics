@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class SearchViewController: UIViewController{
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var searchResults: UITableView!
@@ -70,6 +71,5 @@ extension SearchViewController {
                 }
             }
         }
-        
     }
 }
