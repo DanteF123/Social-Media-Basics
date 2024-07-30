@@ -27,6 +27,10 @@
 		7B6E05752C4724E800097A39 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E05742C4724E800097A39 /* SearchViewController.swift */; };
 		7B6E064B2C586D9600097A39 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E064A2C586D9600097A39 /* SideMenuCell.swift */; };
 		7B6E064D2C586DA800097A39 /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6E064C2C586DA800097A39 /* SideMenuCell.xib */; };
+		7B6E064F2C586F6900097A39 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E064E2C586F6900097A39 /* SideMenuViewController.swift */; };
+		7B6E06512C586F7A00097A39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06502C586F7A00097A39 /* MainViewController.swift */; };
+		7B6E06532C5871A100097A39 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06522C5871A100097A39 /* SideMenuModel.swift */; };
+		7B6E06552C5874DB00097A39 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06542C5874DB00097A39 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		7B6E05742C4724E800097A39 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7B6E064A2C586D9600097A39 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7B6E064C2C586DA800097A39 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		7B6E064E2C586F6900097A39 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		7B6E06502C586F7A00097A39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7B6E06522C5871A100097A39 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
+		7B6E06542C5874DB00097A39 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,8 @@
 				7B5436572C223D000092407F /* Assets.xcassets */,
 				7B54365C2C223D000092407F /* Info.plist */,
 				7B5436832C224A770092407F /* GoogleService-Info.plist */,
+				7B6E064E2C586F6900097A39 /* SideMenuViewController.swift */,
+				7B6E06502C586F7A00097A39 /* MainViewController.swift */,
 			);
 			path = "Social Media Basics";
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			children = (
 				7B6E04DE2C2B767C00097A39 /* User.swift */,
 				7B6E05662C37831A00097A39 /* Post.swift */,
+				7B6E06522C5871A100097A39 /* SideMenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,8 +187,6 @@
 				7B6E06482C586D0300097A39 /* SideMenuControllers */,
 				7B54368F2C23AC490092407F /* RegisterViewController.swift */,
 				7B5436522C223CFE0092407F /* HomeViewController.swift */,
-				7B6E04DC2C279D4900097A39 /* HelloViewController.swift */,
-				7B6E05742C4724E800097A39 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +201,9 @@
 		7B6E06482C586D0300097A39 /* SideMenuControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B6E04DC2C279D4900097A39 /* HelloViewController.swift */,
+				7B6E05742C4724E800097A39 /* SearchViewController.swift */,
+				7B6E06542C5874DB00097A39 /* TestViewController.swift */,
 			);
 			path = SideMenuControllers;
 			sourceTree = "<group>";
@@ -347,13 +359,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5436532C223CFE0092407F /* HomeViewController.swift in Sources */,
+				7B6E06532C5871A100097A39 /* SideMenuModel.swift in Sources */,
+				7B6E06512C586F7A00097A39 /* MainViewController.swift in Sources */,
 				7B6E04DD2C279D4900097A39 /* HelloViewController.swift in Sources */,
 				7B6E05752C4724E800097A39 /* SearchViewController.swift in Sources */,
+				7B6E06552C5874DB00097A39 /* TestViewController.swift in Sources */,
 				7B6E04DF2C2B767C00097A39 /* User.swift in Sources */,
 				7B54364F2C223CFE0092407F /* AppDelegate.swift in Sources */,
 				7B6E064B2C586D9600097A39 /* SideMenuCell.swift in Sources */,
 				7B5436512C223CFE0092407F /* SceneDelegate.swift in Sources */,
 				7B6E05672C37831A00097A39 /* Post.swift in Sources */,
+				7B6E064F2C586F6900097A39 /* SideMenuViewController.swift in Sources */,
 				7B5436902C23AC490092407F /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
