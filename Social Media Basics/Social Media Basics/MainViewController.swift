@@ -96,6 +96,9 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case 0:
             // Home
             self.showViewController(viewController: UINavigationController.self, storyboardId: "TestNavID")
+        case 1:
+            // Home
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "MusicNavID")
             
         default:
             break

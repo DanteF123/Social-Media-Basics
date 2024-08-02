@@ -17,22 +17,29 @@ class SideMenuViewController: UIViewController {
     
     @IBOutlet weak var sideMenuTableView: UITableView!
     
+    @IBOutlet var roundedView: UIView!
+    
     var delegate: SideMenuViewControllerDelegate?
     
     var defaultHighlightedCell: Int = 0
     
     var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Test")
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Test"),
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Music"),
+        
     ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //round view
+        roundedView.layer.cornerRadius = 20
+        roundedView.clipsToBounds = true
 
         // TableView
         self.sideMenuTableView.delegate = self
         self.sideMenuTableView.dataSource = self
-        self.sideMenuTableView.backgroundColor = #colorLiteral(red: 0, green: 0.3827145161, blue: 1, alpha: 1)
+        self.sideMenuTableView.backgroundColor = #colorLiteral(red: 0.5989779234, green: 0.825442493, blue: 0.8293678164, alpha: 1)
         self.sideMenuTableView.separatorStyle = .none
         
         // Set Highlighted Cell
@@ -75,7 +82,7 @@ extension SideMenuViewController: UITableViewDataSource {
         
         // Highlighted color
         let myCustomSelectionColorView = UIView()
-        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 0.6196078431, green: 0.1098039216, blue: 0.2509803922, alpha: 1)
+        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         cell.selectedBackgroundView = myCustomSelectionColorView
         return cell
     }

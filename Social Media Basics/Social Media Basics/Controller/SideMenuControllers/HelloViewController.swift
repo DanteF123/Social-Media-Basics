@@ -26,6 +26,7 @@ class HelloViewController: UIViewController {
     }
     
     
+    
     let db = Firestore.firestore()
     let currentUser = Auth.auth().currentUser
     

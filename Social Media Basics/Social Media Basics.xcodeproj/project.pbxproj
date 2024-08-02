@@ -31,6 +31,7 @@
 		7B6E06512C586F7A00097A39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06502C586F7A00097A39 /* MainViewController.swift */; };
 		7B6E06532C5871A100097A39 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06522C5871A100097A39 /* SideMenuModel.swift */; };
 		7B6E06552C5874DB00097A39 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E06542C5874DB00097A39 /* TestViewController.swift */; };
+		7B903D092C5C4EA800CE2555 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B903D082C5C4EA800CE2555 /* MusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		7B6E06502C586F7A00097A39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7B6E06522C5871A100097A39 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		7B6E06542C5874DB00097A39 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		7B903D082C5C4EA800CE2555 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				7B6E04DC2C279D4900097A39 /* HelloViewController.swift */,
 				7B6E05742C4724E800097A39 /* SearchViewController.swift */,
 				7B6E06542C5874DB00097A39 /* TestViewController.swift */,
+				7B903D082C5C4EA800CE2555 /* MusicViewController.swift */,
 			);
 			path = SideMenuControllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				7B6E06552C5874DB00097A39 /* TestViewController.swift in Sources */,
 				7B6E04DF2C2B767C00097A39 /* User.swift in Sources */,
 				7B54364F2C223CFE0092407F /* AppDelegate.swift in Sources */,
+				7B903D092C5C4EA800CE2555 /* MusicViewController.swift in Sources */,
 				7B6E064B2C586D9600097A39 /* SideMenuCell.swift in Sources */,
 				7B5436512C223CFE0092407F /* SceneDelegate.swift in Sources */,
 				7B6E05672C37831A00097A39 /* Post.swift in Sources */,
