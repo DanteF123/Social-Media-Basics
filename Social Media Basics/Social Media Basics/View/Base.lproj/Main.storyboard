@@ -264,9 +264,9 @@
         <!--Main View Controller-->
         <scene sceneID="vYW-fa-3GO">
             <objects>
-                <viewController id="iNF-Ts-8yz" customClass="MainViewController" customModule="Social_Media_Basics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="iNF-Ts-8yz" customClass="MainViewController" customModule="Social_Media_Basics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPG-lO-YCD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="eSw-Q0-asY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -321,7 +321,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zPU-e8-Hac">
             <objects>
-                <navigationController id="5mp-Ai-uIh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HelloNavID" modalPresentationStyle="fullScreen" id="5mp-Ai-uIh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AoX-EQ-oDd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -332,7 +332,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmj-Bu-weZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750" y="630"/>
+            <point key="canvasLocation" x="2156" y="-74"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="mW8-zc-eU9">
@@ -451,7 +451,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tTb-67-9ln"/>
+        <segue reference="IsP-Za-7nL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IMG_3113" width="2316" height="3088"/>

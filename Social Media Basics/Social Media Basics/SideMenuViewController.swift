@@ -24,8 +24,10 @@ class SideMenuViewController: UIViewController {
     var defaultHighlightedCell: Int = 0
     
     var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Test"),
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Hello"),
         SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Music"),
+        SideMenuModel(icon: UIImage(systemName: "magnifyingglass")!, title: "Search"),
+        SideMenuModel(icon: UIImage(systemName: "figure.walk")!, title: "Log Out")
         
     ]
     

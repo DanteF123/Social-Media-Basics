@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
         
         
         // Default Main View Controller
-        showViewController(viewController: UINavigationController.self, storyboardId: "TestNavID")
+        showViewController(viewController: UINavigationController.self, storyboardId: "HelloNavID")
         
     }
     // Keep the state of the side menu (expanded or collapse) in rotation
@@ -95,7 +95,7 @@ extension MainViewController: SideMenuViewControllerDelegate {
         switch row {
         case 0:
             // Home
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "TestNavID")
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "HelloNavID")
         case 1:
             // Home
             self.showViewController(viewController: UINavigationController.self, storyboardId: "MusicNavID")
