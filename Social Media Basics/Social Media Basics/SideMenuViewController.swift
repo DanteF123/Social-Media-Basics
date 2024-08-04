@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol SideMenuViewControllerDelegate {
     func selectedCell(_ row: Int)
@@ -18,14 +19,16 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var sideMenuTableView: UITableView!
     
     @IBOutlet var roundedView: UIView!
+    @IBOutlet weak var sideMenuLabel: UILabel!
     
     var delegate: SideMenuViewControllerDelegate?
     
     var defaultHighlightedCell: Int = 0
     
+    let currentUser = Auth.auth().currentUser
+    
     var menu: [SideMenuModel] = [
         SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Hello"),
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Music"),
         SideMenuModel(icon: UIImage(systemName: "magnifyingglass")!, title: "Search"),
         SideMenuModel(icon: UIImage(systemName: "figure.walk")!, title: "Log Out")
         
@@ -48,6 +51,11 @@ class SideMenuViewController: UIViewController {
         DispatchQueue.main.async {
             let defaultRow = IndexPath(row: self.defaultHighlightedCell, section: 0)
             self.sideMenuTableView.selectRow(at: defaultRow, animated: false, scrollPosition: .none)
+            
+            //set label to email
+            let name = self.currentUser?.email
+            self.sideMenuLabel.text = name
+            
         }
         
         // Register TableView Cell

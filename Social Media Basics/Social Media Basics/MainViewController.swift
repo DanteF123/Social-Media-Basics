@@ -7,6 +7,7 @@
 
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
     
@@ -97,15 +98,28 @@ extension MainViewController: SideMenuViewControllerDelegate {
             // Home
             self.showViewController(viewController: UINavigationController.self, storyboardId: "HelloNavID")
         case 1:
-            // Home
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "MusicNavID")
-            
+            // Search
+            self.showViewController(viewController: UINavigationController.self, storyboardId: "SearchNavID")
+        case 2:
+            //Log out
+            signOutUser()
+            performSegue(withIdentifier: "mainToLogIn", sender: self)
         default:
             break
         }
         
         // Collapse side menu with animation
         DispatchQueue.main.async { self.sideMenuState(expanded: false) }
+    }
+    
+    func signOutUser() {
+        do {
+            try Auth.auth().signOut()
+            print("User signed out successfully.")
+            // Optionally, you can navigate the user to a different screen or update the UI
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
     }
     
     func showViewController<T: UIViewController>(viewController: T.Type, storyboardId: String) -> () {
