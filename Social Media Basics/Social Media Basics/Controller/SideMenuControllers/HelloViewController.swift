@@ -25,6 +25,7 @@ class HelloViewController: UIViewController {
 
     }
     
+    @IBOutlet weak var sideMenuButton: UIBarButtonItem!
     
     
     let db = Firestore.firestore()
@@ -41,6 +42,9 @@ class HelloViewController: UIViewController {
         toDoList.register(UITableViewCell.self, forCellReuseIdentifier: "ReusableCell")
         populatePosts()
         addLongPressGesture()
+        
+        sideMenuButton.target = revealViewController()
+        sideMenuButton.action = #selector(revealViewController()?.revealSideMenu)
         
     }
 }

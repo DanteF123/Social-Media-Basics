@@ -242,10 +242,17 @@
                         <viewLayoutGuide key="safeArea" id="9I2-JM-LDs"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RgZ-gV-ceq"/>
+                    <navigationItem key="navigationItem" id="RgZ-gV-ceq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" style="plain" id="qwa-fT-Rm1">
+                            <connections>
+                                <action selector="sideMenuButton:" destination="jiW-yU-y1X" id="TDf-7L-FGC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addItemText" destination="2Ua-4t-8xE" id="jr2-1o-zzl"/>
                         <outlet property="helloLabel" destination="WJ5-ZG-lph" id="STQ-zW-heR"/>
+                        <outlet property="sideMenuButton" destination="qwa-fT-Rm1" id="SpH-fz-Vzw"/>
                         <outlet property="toDoList" destination="K9W-F6-7s9" id="Cu5-PL-TFz"/>
                     </connections>
                 </viewController>
@@ -410,10 +417,17 @@
                         <viewLayoutGuide key="safeArea" id="cMP-eR-OEk"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="byt-M2-6Oj"/>
+                    <navigationItem key="navigationItem" id="byt-M2-6Oj">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" style="plain" id="CIK-gr-qQd">
+                            <connections>
+                                <action selector="sideMenuButton:" destination="jiW-yU-y1X" id="zF5-nG-ysN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="QMT-dc-ngc" id="btH-Gk-cdd"/>
                         <outlet property="searchResults" destination="KTO-HA-h9l" id="hAB-p3-JnE"/>
+                        <outlet property="sideMenuButton" destination="CIK-gr-qQd" id="InM-3W-CPr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3P-FL-tqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,6 +481,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IMG_3113" width="2316" height="3088"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

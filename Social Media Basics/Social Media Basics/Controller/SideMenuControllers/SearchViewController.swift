@@ -16,6 +16,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate{
     
     @IBOutlet weak var searchResults: UITableView!
     
+    @IBOutlet weak var sideMenuButton: UIBarButtonItem!
+    
     var users: [User] = []
     var filteredUsers: [User] = [] // Add filtered users array
     let db = Firestore.firestore()
@@ -27,6 +29,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate{
         searchResults.register(UITableViewCell.self, forCellReuseIdentifier: "SearchCell")
         searchBar.delegate = self // Set the search bar delegate
         getAllUsers()
+        
+        sideMenuButton.target = revealViewController()
+        sideMenuButton.action = #selector(revealViewController()?.revealSideMenu)
     }
     
     func filterUsers(for searchText: String) {
